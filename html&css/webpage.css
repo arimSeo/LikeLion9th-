@@ -1,0 +1,66 @@
+/* 초기화 */
+*{
+    margin:0;
+    padding:0;
+}
+/*  */
+
+header{
+    background-color: rgb(155, 222, 248);
+    padding:50px;
+    text-align: center;
+    display: block;
+    color:rgb(2, 31, 88);
+    /* display: inline;   해당 단어에만 배경색 지정 */
+    /* position: fixed;   고정되어 떠있는것처럼 보임(스크롤 내려도 그대로) */
+}
+
+nav{
+    background-color: pink;
+    padding:10px;
+    display: flex;
+    justify-content: flex-end;   /* 안에 요소들을 어떻게 정렬할건지 결정(flex-end: 끝에서 부터 정렬) */
+    color: rgb(248, 242, 242);
+}
+nav > a{
+    padding: 5px;
+    text-decoration: none;
+    color:inherit;  /* 부모 태그(nav)의 color와 똑같이 상속받아라 */
+    font-weight: bold;
+}
+
+
+/* div class="box" */
+/* .box{ */
+    /* position: relative;  */
+    /* 기본위치(static일때)에서 좌표속성(top,left,right,bottom) 사용가능 */
+/* } */
+.container{
+    display: flex;
+    height: 500px;
+}
+article{
+    flex:7;     
+    /* flex는 가장 보기좋게 n:m으로 나누어짐(여기선 7:3) */
+    padding-top: 30px;
+    text-align: center;
+}
+/* article{ */
+    /* position:absolute;  */
+    /* 부모or조상요소(여기선div)에서 relative/absolute/fixed가 선언된 곳을 기준으로 좌표속성사용 */
+    /* top: 50px;
+    left: 50px; */
+/* } */
+
+aside{
+    background-color: rgb(163, 160, 160);
+    flex:3;
+    padding:30px;
+    /* position: absolute; */
+}
+
+footer{
+    background-color: palevioletred;
+    padding:30px;
+    text-align: center;
+}
